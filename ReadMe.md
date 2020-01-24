@@ -23,7 +23,7 @@
 	//Output:中间件文档参考: https://github.com/Sc7-git/NanGua.Net
 
 <br/>
-__2、Use函数和两个重要参数：next、context__: <br>
+__2、Use函数和两个重要参数：next、context__： <br>
 
 把NanGua看作一个管道；<br>
 
