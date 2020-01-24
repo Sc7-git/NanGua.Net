@@ -22,6 +22,8 @@
 	mw.Run();
 	//Output:中间件文档参考: https://github.com/Sc7-git/NanGua.Net
 
+注：以上输出来自End默认值。
+
 <br/>
 
 **2、Use函数和两个重要参数：next、context**：
@@ -191,4 +193,4 @@ When的用法分三步：1、创建延迟对象，2、在注册函数中返回�
 
 **其他：**<br/>
 One：第一个执行，只允许调用一次。<br/>
-End：最后一个执行，允许多次调用。end不是附加，而是覆盖。End是有默认值的。<br/>
+End：最后一个执行，允许多次调用。end不是附加，而是覆盖。注意End没有next；End是有默认值的。<br/>
