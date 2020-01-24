@@ -23,7 +23,7 @@
 	//Output:中间件文档参考: https://github.com/Sc7-git/NanGua.Net
 
 <br/>
-__2、Use函数和两个重要参数：next、context :__ <br>
+**2、Use函数和两个重要参数：next、context**: <br>
 
 把NanGua看作一个管道；<br>
 
@@ -84,8 +84,8 @@ Use就是在管道上添加处理节点，在代码中理解为注册中间件�
 
 **4、管道分支** <br/>
 从宏观上看就是由单一管道结构转变为树形结构。<br/>
-__注意：__map返回的是一个新的NanGua对象，同一个NanGua对象注册的map是同一层级的分支。所以mw.map()和mw.map()是同一级分支，但mw.map()和mw.map().map()则是上下级分支。不要因为链式编程的便捷而带来不必要的麻烦。<br/>
-__注意：__因为map返回的并非原本的NanGua对象，所以一定是使用原本的NanGua对象执行Run。
+__注意__：map返回的是一个新的NanGua对象，同一个NanGua对象注册的map是同一层级的分支。所以mw.map()和mw.map()是同一级分支，但mw.map()和mw.map().map()则是上下级分支。不要因为链式编程的便捷而带来不必要的麻烦。<br/>
+__注意__：因为map返回的并非原本的NanGua对象，所以一定是使用原本的NanGua对象执行Run。
 
 例1：
 
