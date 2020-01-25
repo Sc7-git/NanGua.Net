@@ -37,7 +37,7 @@ next就是管道上的处理节点,如阀门、分流阀、净水器、滤网等
 
 Use就是在管道上添加处理节点，在代码中理解为注册中间件。之后介绍的Map、When都是基于Use的实现。注：注册完成所有中间件之后需要Run才能运行！<br>
 
-**3、嵌套解耦、灵活封装、嵌套并行(代码并行、逻辑并行)**
+**3、嵌套解耦、灵活封装、嵌套并行(代码并行、逻辑并行)** <br/>
 多个嵌套函数如何解耦？异步嵌套如何解耦？在不同场景下嵌套顺序不同如何封装(例:a函数中嵌套b函数，但是在另一场景又需要b函数嵌套a函数，此时该如何封装函数才能代码复用。在实际应用中可不止a、b两个函数。)？
 
 	NanGua<object> mw = new NanGua<object>(null);
@@ -186,6 +186,13 @@ When的用法分三步：1、创建延迟对象，2、在注册函数中返回�
 	     })
 	      .Run();
         Console.ReadKey();
+    }
+    
+    public async static void RequestAsync(int second, Action callBack)
+    {
+        //模仿网络延迟
+        await Task.Delay(second * 1000);
+        callBack();
     }
 
 试试把上面代码中when第二个参数从1改为2、3看看效果是怎么样的。
