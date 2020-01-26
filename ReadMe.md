@@ -68,14 +68,11 @@ Use就是在管道上添加处理节点，在代码中理解为注册中间件�
     }
 
 	//Func<DelegateInput<T>, DelegateOutput<T>>
-    static DelegateOutput<object> A(DelegateInput<object> next)
-    {
-        return context =>
-        {
-            Console.WriteLine(nameof(A));
-            next(context);
-        };
-    }
+	static DelegateOutput<object> A(DelegateInput<object> next) =>
+	     context =>{
+	        Console.WriteLine(nameof(A));
+	        next(context);
+	    };
 
 	//SimpleDelegate<T>
     static void B(DelegateInput<object> next, object context)
